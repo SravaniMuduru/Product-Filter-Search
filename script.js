@@ -1,3 +1,4 @@
+
 let products = {
     data:[
         {
@@ -54,7 +55,7 @@ for(let i of products.data) {
     //create card
     let card = document.createElement("div");
     //card should have category and should hidden initially
-    card.classList.add("card",i.category,"hide");
+    card.classList.add("card",i.category, "hide");
     //image div
     let imgContainer=document.createElement("div");
     imgContainer.classList.add("image-container");
@@ -73,7 +74,7 @@ for(let i of products.data) {
     container.appendChild(name);
     //price
     let price=document.createElement("h6");
-    price.innerText + i.price;
+    price.innerText= "$" + i.price;
     container.appendChild(price);
     card.appendChild(container);
     document.getElementById("products").appendChild(card);
@@ -131,5 +132,4 @@ document.getElementById("search").addEventListener("click", () => {
 window.onload=()=>{
     filterProduct("all");
 }
-
 
